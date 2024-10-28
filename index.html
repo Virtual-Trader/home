@@ -1,155 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeP2P - Безопасный P2P обмен криптовалют</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    <!-- Title of the Page -->
-    <title>VirtualTrade - VIP Crypto Trading Signals</title>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="VirtualTrade offers VIP crypto trading signals for futures. Join our exclusive group to get daily profitable trade signals.">
+        /* Основной контент */
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
 
-    <!-- Keywords for SEO -->
-    <meta name="keywords" content="crypto, futures trading, VIP signals, crypto trading, daily signals, cryptocurrency, trading group">
+        /* Герой-секция */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-    <!-- Robots Meta Tag to allow indexing -->
-    <meta name="robots" content="index, follow">
+        /* Блок с преимуществами */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
-    <!-- Open Graph for Social Media Sharing -->
-    <meta property="og:title" content="VirtualTrade - VIP Crypto Trading Signals">
-    <meta property="og:description" content="Join VirtualTrade and get daily VIP crypto trading signals for futures markets. Boost your profits!">
-    <meta property="og:image" content="https://i.postimg.cc/WDLz50yZ/image.png">
-    <meta property="og:url" content="https://virtual-trader.github.io/home/">
-    <meta property="og:type" content="website">
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            margin: 10px;
+        }
 
-    <!-- Twitter Card Data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VirtualTrade - VIP Crypto Trading Signals">
-    <meta name="twitter:description" content="Join VirtualTrade to get daily crypto trading signals for futures and maximize your profits.">
-    <meta name="twitter:image" content="https://i.postimg.cc/WDLz50yZ/image.png">
+        /* Дополнительная информация */
+        .info {
+            margin-top: 40px;
+            text-align: center;
+        }
 
-    <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://virtual-trader.github.io/home/">
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 15px 20px;
+            border-top: 1px solid #ccc;
+        }
 
-    <!-- Favicon for branding -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        /* Кнопки */
+        .btn-custom {
+            margin: 5px;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 992px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 90%; /* Ширина для мобильных устройств */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            nav .navbar-nav {
+                flex-direction: column;
+            }
+
+            .navbar-nav .nav-item {
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Header Section -->
-    <header class="bg-dark">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">VirtualTrade</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">Обо мне</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pricing">Тарифы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">SafeP2P</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about.html">О сервисе</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade.html">Торговля</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Поддержка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fees.html">Комиссии и лимиты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html">Политика конфиденциальности</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Регистрация</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Вход</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="py-5 bg-black text-light">
-        <div class="container d-flex flex-column-reverse flex-md-row align-items-center">
-            <div class="col-md-6">
-                <h2 class="display-5">VIP Группа по Фьючерсной Торговле</h2>
-                <p class="lead">Получайте ежедневные сигналы по криптовалютам от профессионала. Точные и прибыльные сделки каждый день.</p>
-                <a href="#pricing" class="btn btn-warning">Присоединиться к группе</a>
+    <!-- Основной контент -->
+    <main>
+        <section class="hero">
+            <h1>SafeP2P - Безопасный P2P обмен криптовалют</h1>
+            <p>Торгуйте криптовалютами без документов и с полной уверенностью. Мы выступаем гарантом между покупателем и продавцом, обеспечивая надёжность каждой сделки.</p>
+            <button class="btn btn-primary btn-custom" onclick="location.href='register.html'">Начать торговлю</button>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="features">
+            <div class="feature">
+                <h2>Без документов и паспортных данных</h2>
+                <p>Ваши данные остаются в безопасности. Никаких лишних требований для торговли.</p>
             </div>
-            <div class="col-md-6">
-                <img src="https://i.postimg.cc/WDLz50yZ/image.png" alt="Crypto Trade Image" class="img-fluid">
+            <div class="feature">
+                <h2>Гарантия сделки</h2>
+                <p>SafeP2P обеспечивает гарантии на все сделки, выступая посредником между покупателем и продавцом.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-dark text-light">
-        <div class="container text-center">
-            <h3>Почему VirtualTrade?</h3>
-            <p>Я предоставляю лучшие торговые сигналы для фьючерсов, основанные на глубоких аналитических данных. Моя стратегия разработана для максимальной прибыли. В VIP группе вы получаете доступ к эксклюзивным сигналам, которые рассчитаны на краткосрочные и долгосрочные сделки, а также мы всегда будем на связи чтобы помочь с каждой сделкой наших клиентов. Постоянные обновления рынка и точные прогнозы помогут вам зарабатывать на волатильности криптовалют.</p>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-5">
-        <div class="container text-center">
-            <h3>Выберите свой тариф</h3>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-dark text-light">
-                        <div class="card-body">
-                            <h4 class="card-title">1 неделя</h4>
-                            <p class="card-text">$29</p>
-                            <a href="https://pay.cryptocloud.plus/pos/2iVnMX1NTlXNOcni" class="btn btn-warning">Выбрать</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-warning text-dark">
-                        <div class="card-body">
-                            <h4 class="card-title">1 месяц</h4>
-                            <p class="card-text">$99</p>
-                            <a href="#" class="btn btn-dark">Выбрать</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-dark text-light">
-                        <div class="card-body">
-                            <h4 class="card-title">3 месяца</h4>
-                            <p class="card-text">$249</p>
-                            <a href="#" class="btn btn-warning">Выбрать</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="feature">
+                <h2>Комиссия 2%</h2>
+                <p>Мы взимаем всего 2% комиссии с каждой сделки, что делает наши условия прозрачными и выгодными.</p>
             </div>
-        </div>
-    </section>
+            <div class="feature">
+                <h2>Простота и удобство</h2>
+                <p>Интуитивно понятный интерфейс и поддержка банковских карт для удобного обмена криптовалют.</p>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-light">
-        <div class="container">
-            <h3 class="text-center mb-4">Контакты</h3>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Ваше имя</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Ваш Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Сообщение</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-warning">Отправить</button>
-            </form>
-        </div>
-    </section>
+        <!-- Дополнительная информация -->
+        <section class="info">
+            <h2>Как это работает?</h2>
+            <p>Присоединяйтесь к SafeP2P и начните обменивать криптовалюты с другими пользователями. Вы просто выбираете сделку, подтверждаете условия и осуществляете обмен, в то время как мы гарантируем безопасность ваших средств.</p>
+            <p>Мы предоставляем платформу для безопасного обмена, не требуя от вас предоставления документов. Это позволяет сохранить анонимность и сделать процесс обмена более быстрым.</p>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-3 text-center">
-        <p>&copy; 2024 VirtualTrade. Все права защищены.</p>
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 SafeP2P. Все права защищены.</p>
+        <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Подключение Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
